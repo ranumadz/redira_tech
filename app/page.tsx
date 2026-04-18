@@ -84,7 +84,7 @@ const portfolioItems = [
     description:
       "Sistem booking digital dengan dashboard admin, monitoring data, dan operasional yang lebih rapi.",
     image: "/images/portfolio-2.jpg",
-    link: "#",
+    link: "https://readyroom.id/",
   },
   {
     title: "Mobile Service Application",

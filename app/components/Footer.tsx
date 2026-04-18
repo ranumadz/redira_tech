@@ -1,15 +1,19 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="relative overflow-hidden border-t border-white/10 bg-[#050816] text-white">
-      <div className="pointer-events-none absolute inset-0 -z-10">
+      {/* background glow */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute left-[-80px] top-[-100px] h-[240px] w-[240px] rounded-full bg-cyan-500/10 blur-[100px]" />
         <div className="absolute right-[-80px] bottom-[-120px] h-[260px] w-[260px] rounded-full bg-blue-600/10 blur-[120px]" />
       </div>
 
       <div className="mx-auto max-w-7xl px-6 py-14">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
               <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-cyan-400 to-blue-600 shadow-lg shadow-cyan-900/30" />
@@ -30,10 +34,12 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Navigation */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">
               Navigasi
             </h4>
+
             <div className="mt-5 flex flex-col gap-3 text-sm text-white/70">
               <Link href="/" className="transition hover:text-white">
                 Home
@@ -56,10 +62,12 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Services */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">
               Layanan
             </h4>
+
             <div className="mt-5 flex flex-col gap-3 text-sm text-white/70">
               <p>Website Development</p>
               <p>Mobile App Development</p>
@@ -69,6 +77,7 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Contact */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-300">
               Kontak
@@ -102,9 +111,10 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom */}
         <div className="mt-10 border-t border-white/10 pt-6">
           <div className="flex flex-col gap-3 text-sm text-white/45 md:flex-row md:items-center md:justify-between">
-            <p>© {new Date().getFullYear()} Redira Technology. All rights reserved.</p>
+            <p>© {year} Redira Technology. All rights reserved.</p>
             <p>Built for modern business growth.</p>
           </div>
         </div>
