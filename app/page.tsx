@@ -122,6 +122,12 @@ const stats = [
   { value: "Scale", label: "Ready to Grow" },
 ];
 
+const trustPoints = [
+  "120+ bisnis pernah konsultasi & menggunakan jasa digital kami",
+  "Cocok untuk website, aplikasi mobile, dashboard, dan SaaS",
+  "Dipilih bisnis yang pengen tampil lebih proper dan meyakinkan",
+];
+
 export default function HomePage() {
   return (
     <main className="bg-[#F4F7FB] text-slate-900 overflow-x-hidden">
@@ -136,7 +142,16 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 border-b border-white/60 bg-white/70 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3 min-w-0">
-            <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-[#4F8CFF] to-[#6C63FF] shadow-lg shadow-blue-500/20" />
+            <div className="relative h-11 w-11 overflow-hidden rounded-2xl bg-white shadow-lg shadow-blue-500/10 ring-1 ring-white/70">
+              <Image
+                src="/images/icon_redira.png"
+                alt="Redira Technology Icon"
+                fill
+                className="object-contain p-1.5"
+                priority
+              />
+            </div>
+
             <div className="min-w-0">
               <p className="font-semibold tracking-tight text-slate-900 truncate">
                 Redira Technology
@@ -231,6 +246,39 @@ export default function HomePage() {
                 >
                   Lihat Portfolio
                 </a>
+              </div>
+
+              {/* TRUST TEXT BELOW HERO */}
+              <div className="mt-8 rounded-[28px] border border-white/70 bg-white/85 p-5 shadow-[0_12px_35px_rgba(15,23,42,0.05)] backdrop-blur">
+                <div className="flex items-center gap-3">
+                  <div className="relative h-10 w-10 overflow-hidden rounded-2xl bg-[#EEF3FF] ring-1 ring-slate-200">
+                    <Image
+                      src="/images/icon_redira.png"
+                      alt="Redira Trust Icon"
+                      fill
+                      className="object-contain p-1.5"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#5D58F6]">
+                      Trusted Value
+                    </p>
+                    <p className="text-sm text-slate-500">
+                      Bukti awal biar calon client lebih yakin lihat service kamu
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-3 md:grid-cols-3">
+                  {trustPoints.map((item, i) => (
+                    <div
+                      key={i}
+                      className="rounded-[22px] bg-[#F7F9FF] px-4 py-4 text-sm leading-7 text-slate-700 ring-1 ring-slate-200/70"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
