@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     default: "Redira Technology",
     template: "%s | Redira Technology",
   },
-  description: "Digital Solutions for Modern Business",
+  description:
+    "Redira Technology membantu bisnis membangun website, mobile app, dashboard, dan solusi SaaS modern.",
 };
 
 export default function RootLayout({
@@ -24,10 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${jakarta.variable} h-full scroll-smooth`}>
+    <html lang="id" className={`${jakarta.variable} h-full scroll-smooth`}>
       <body className="min-h-screen bg-[#F8FAFC] text-[#0F172A] font-sans antialiased">
         <div className="flex min-h-screen flex-col">
-          <main className="flex-1">{children}</main>
+          <div className="flex-1">{children}</div>
           <Footer />
         </div>
       </body>
