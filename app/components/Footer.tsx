@@ -79,7 +79,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-white/45">WhatsApp</p>
-                <p className="mt-1">+62 812-3456-7890</p>
+                <p className="mt-1">+62 851-7843-7432</p>
               </div>
               <div>
                 <p className="text-white/45">Lokasi</p>
