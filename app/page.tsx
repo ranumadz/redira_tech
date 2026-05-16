@@ -305,19 +305,21 @@ function FloatingCard({
 
 function HeroShowcase() {
   return (
-    <div className="relative mx-auto min-h-[620px] w-full max-w-[720px] lg:min-h-[720px]">
-      <div className="absolute left-1/2 top-[52%] h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff5a3d]/12 blur-3xl" />
-      <div className="absolute bottom-10 left-1/2 h-[340px] w-[640px] -translate-x-1/2 rounded-[999px] bg-[#ffb59e]/25 blur-3xl" />
+    <div className="relative mx-auto min-h-[600px] w-full max-w-[760px] overflow-visible sm:min-h-[660px] lg:min-h-[740px]">
+      <div className="absolute left-1/2 top-[50%] h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff5a3d]/12 blur-3xl" />
+      <div className="absolute bottom-6 left-1/2 h-[360px] w-[700px] -translate-x-1/2 rounded-[999px] bg-[#ffb59e]/25 blur-3xl" />
 
-      <Image
-        src="/images/orang.png"
-        alt="Pengguna Redira memantau performa bisnis melalui smartphone"
-        width={620}
-        height={820}
-        priority
-        sizes="(max-width: 1024px) 90vw, 620px"
-        className="absolute bottom-0 left-1/2 z-20 w-[72%] max-w-[520px] -translate-x-1/2 object-contain drop-shadow-[0_38px_90px_rgba(15,23,42,0.18)] sm:w-[64%] lg:w-[76%]"
-      />
+ <div className="pointer-events-none absolute bottom-0 left-[50%] z-20 overflow-visible">
+  <Image
+    src="/images/photo1.jpg"
+    alt="Pengguna Redira memantau performa bisnis melalui smartphone"
+    width={1100}
+    height={1400}
+    priority
+    sizes="(max-width: 1024px) 92vw, 760px"
+    className="w-[560px] max-w-none -translate-x-1/2 -translate-y-[45px] object-contain object-bottom drop-shadow-[0_38px_90px_rgba(15,23,42,0.18)] sm:w-[620px] sm:-translate-y-[55px] md:w-[700px] md:-translate-y-[75px] lg:w-[760px] lg:-translate-x-[33%] lg:-translate-y-[250px]"
+  />
+</div>
 
       <FloatingCard className="absolute left-3 top-16 z-30 hidden w-[220px] sm:block">
         <div className="grid size-12 place-items-center rounded-2xl bg-[#ff5a3d] text-white">
@@ -358,21 +360,21 @@ function HeroShowcase() {
         </div>
       </FloatingCard>
 
-      <FloatingCard className="absolute right-0 top-14 z-30 w-[260px] sm:right-2 md:w-[300px]">
-        <div className="flex items-start justify-between gap-4">
+      <FloatingCard className="absolute right-0 top-6 z-40 w-[218px] !p-3 sm:right-2 md:w-[238px] lg:-right-1 lg:top-6">
+        <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs font-black text-[#101725]">Ringkasan Bisnis</p>
-            <p className="mt-4 text-xs text-slate-500">Pendapatan</p>
-            <p className="mt-1 text-2xl font-black text-[#101725]">Rp 182.6 jt</p>
+            <p className="text-[11px] font-black text-[#101725]">Ringkasan Bisnis</p>
+            <p className="mt-3 text-[11px] text-slate-500">Pendapatan</p>
+            <p className="mt-0.5 text-xl font-black text-[#101725]">Rp 182.6 jt</p>
           </div>
-          <span className="rounded-full border border-slate-100 bg-white px-3 py-1.5 text-[10px] font-bold text-slate-500">
+          <span className="rounded-full border border-slate-100 bg-white px-2.5 py-1 text-[9px] font-bold text-slate-500">
             30 Hari
           </span>
         </div>
-        <div className="mt-2 inline-flex rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-black text-emerald-600">
+        <div className="mt-1.5 inline-flex rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-black text-emerald-600">
           ↑ 18.7%
         </div>
-        <div className="mt-5 flex h-20 items-end gap-1.5">
+        <div className="mt-4 flex h-14 items-end gap-1">
           {[28, 36, 31, 44, 49, 42, 57, 70, 66, 82].map((height, index) => (
             <span
               key={`${height}-${index}`}
@@ -543,18 +545,13 @@ export default function HomePage() {
               <Globe2 size={17} />
               ID
             </button>
-            <Link
-              href="/contact"
-              className="hidden rounded-2xl border border-[#ff5a3d]/35 bg-white px-5 py-3 text-sm font-black !text-[#ff5a3d] transition hover:border-[#ff5a3d] hover:bg-[#fff0eb] sm:inline-flex"
-            >
-              Masuk
-            </Link>
+
             <Link
               href="/contact"
               aria-label="Konsultasi gratis dengan Redira"
               className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#ff5a3d] px-5 py-3 text-sm font-black !text-white shadow-[0_18px_45px_rgba(255,90,61,0.26)] transition hover:-translate-y-0.5 hover:bg-[#ef482b]"
             >
-              Coba Gratis
+              Konsultasi Sekarang
               <ArrowRight size={16} />
             </Link>
           </div>

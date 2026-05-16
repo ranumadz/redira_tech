@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   },
   description:
     "Redira Technology membantu bisnis membangun website, mobile app, dashboard, dan solusi SaaS modern.",
+  icons: {
+    icon: "/images/logo_redira.png",
+    shortcut: "/images/logo_redira.png",
+    apple: "/images/logo_redira.png",
+  },
 };
 
 export default function RootLayout({
